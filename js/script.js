@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const tagihan = Number(inputTagihan.value);
         const orang   = Number(inputOrang.value);
 
+        if (tagihan < 0) {
+            hasil.textContent = "Tagihan tidak boleh negatif!";
+            return;
+        }
+
         if (orang <= 0) {
             hasil.textContent = "Jumlah orang tidak valid!";
             return;
